@@ -8,13 +8,8 @@
 class FileReader
 {
 public:
-	std::vector<std::string> ReadCANMessage(const char* filePath);
+	FileReader() {}
+	~FileReader() {}
 
-	void PrintCANMessage(const std::vector<std::string>& msg) const
-	{
-		for (const auto& x : msg)
-		{
-			std::cout << x << '\n';
-		}
-	}
+	std::vector<std::string> ReadCANMessage(const char* filePath);
 };
