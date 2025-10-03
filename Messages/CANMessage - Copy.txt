@@ -1,0 +1,39 @@
+740 02 10C00000000000 - Single frame request,  2 bytes for '10 C0'
+760 06 50C0003201F4AA - Single frame response, 6 bytes for '50 C0 00 32 01 F4'
+740 02 21830000000000 - Single frame request,  2 bytes for '21 83'
+
+760 10 1A618339484D31 - First frame response, 1 byte for the size(1A), 6 bytes initial message for '61 83 39 48 4D 31'
+740 30 00000000000000 - Flow control request, tells the ECU: go ahead, the way I understand it it's always after FF
+760 21 41341101000265 - Consecutive response, 7 bytes for '41 34 11 01 00 02 65'
+760 22 95616529201203 - Consecutive response, 7 bytes for '95 61 65 29 20 12 03'
+760 23 000000000080AA - Consecutive response, 6 bytes for '00 00 00 00 00 80'
+
+743 02 10C00000000000 - Single frame request,  2 bytes for '10 C0'
+763 06 50C0003201F4AA - Single frame response, 6 bytes for '50 C0 00 32 01 F4'
+743 02 21830000000000 - Single frame request,  2 bytes for '21 83'
+
+763 10 1A618339485030 - First frame response, 1 byte for the size(1A), 6 bytes initial message for '61 83 39 48 4D 31'
+743 30 00000000000000 - Flow control request, tells the ECU: go ahead, the way I understand it it's always after FF
+763 21 411642517F0092 - Consecutive response, 7 bytes for '41 16 42 51 7F 00 92'
+763 22 14190100062003 - Consecutive response, 7 bytes for '14 19 01 00 06 20 03'
+763 23 000000000080AA - Consecutive response, 6 bytes for '00 00 00 00 00 80'
+
+743 02 21800000000000 - Single frame request,  2 bytes for '21 80'
+763 03 7F2112AAAAAAAA - Single frame response, 3 bytes for '7F 21 12'
+7E0 02 10C00000000000 - Single frame request,  2 bytes for '10 C0'
+7E8 06 50C0003201F4AA - Single frame response, 6 bytes for '50 C0 00 32 01 F4'
+7E0 02 21810000000000 - Single frame request,  2 bytes for '21 81'
+
+7E8 10 156181314E3441 - First frame response, 1 byte for the size(15(HEX)), 6 bytes initial message for '61 81 31 4E 34 41'
+7E0 30 00000000000000 - Flow control request, tells the ECU: go ahead, the way I understand it it's always after FF
+7E8 21 4C33415039464E - Consecutive response, 7 bytes for '4C 33 41 50 39 46 4E'
+7E8 22 39303031363300 - Consecutive response, 7 bytes for '39 30 30 31 36 33 00'
+7E8 23 00AAAAAAAAAAAA - Consecutive response, 1 byte for '00'
+
+710 02 10C00000000000 - Single frame request,  2 bytes for '10 C0'
+710 02 10C00000000000 - Single frame request,  2 bytes for '10 C0'
+710 02 10C00000000000 - Single frame request,  2 bytes for '10 C0'
+7E0 02 10C00000000000 - Single frame request,  2 bytes for '10 C0'
+7E8 06 50C0003201F4AA - Single frame response, 6 bytes for '50 C0 00 32 01 F4'
+7E0 03 22F1A000000000 - Single frame request,  3 bytes for '22 F1 A0'
+7E8 03 7F2212AAAAAAAA - Single frame response, 3 bytes for '7F 22 12'
