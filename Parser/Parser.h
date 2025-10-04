@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <type_traits>
 #include "../Messages.h"
 
 #define FIRST_FRAME_OFFSET 6
@@ -15,23 +16,7 @@ public:
 	Parser(std::vector<std::string>&& msg);
 	~Parser() {};
 
-	void PrintRawMessages() const
-	{
-		for (const auto& x : _rawMessages)
-		{
-			std::cout << x << '\n';
-		}
-	}
-
-	void PrintFilteredMessages() const
-	{
-		for (const auto& x : _filteredMessages)
-		{
-			std::cout << x.header << ": " << x.message << '\n';
-		}
-	}
-
-	void PrintMessages() const
+	void PrintMessage() const
 	{
 		for (const auto& x : _message)
 		{
@@ -40,8 +25,8 @@ public:
 	}
 
 private:
-	std::vector<std::string> _rawMessages;
-	std::vector<CANMessage> _filteredMessages;
+	std::vector<std::string> _rawMessage;
+	std::vector<CANMessage> _filteredMessage;
 	std::vector<Message> _message;
 
 	short _consecutiveMsgSize;

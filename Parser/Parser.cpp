@@ -1,12 +1,12 @@
 #include "Parser.h"
 
 Parser::Parser()
-	: _rawMessages{}, _filteredMessages{}, _message{},
+	: _rawMessage{}, _filteredMessage{}, _message{},
 		_consecutiveMsgSize{ 0 }, _consecutiveMessage{}
 {}
 
 Parser::Parser(std::vector<std::string>&& msg)
-	: _rawMessages(std::move(msg)), _filteredMessages{}, _message{},
+	: _rawMessage(std::move(msg)), _filteredMessage{}, _message{},
 		_consecutiveMsgSize{ 0 }, _consecutiveMessage{}
 {
 	FilterMessages();
@@ -15,16 +15,16 @@ Parser::Parser(std::vector<std::string>&& msg)
 
 void Parser::FilterMessages()
 {
-	for (const auto& x : _rawMessages)
+	for (const auto& x : _rawMessage)
 	{
 		CANMessage msg(x.substr(0, 3), x.substr(3, 2), x.substr(5));
-		_filteredMessages.push_back(std::move(msg));
+		_filteredMessage.push_back(std::move(msg));
 	}
 }
 
 void Parser::GetMessages()
 {
-	for (auto& msg : _filteredMessages)
+	for (auto& msg : _filteredMessage)
 	{
 		switch (msg.type.high)
 		{

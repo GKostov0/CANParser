@@ -1,6 +1,6 @@
 #include "FileReader.h"
 
-std::vector<std::string> FileReader::ReadCANMessage(const char* filePath)
+std::vector<std::string> FileReader::ReadRawMessage(const char* filePath)
 {
     // return empty if error reading
     std::vector<std::string> result;

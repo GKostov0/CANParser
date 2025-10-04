@@ -30,7 +30,8 @@ struct CANType
 	{
 	}
 
-	// high - 0 - Single message, low - size of msg in bytes
+	// ISO 15765-2
+	// high - 0 - Single message, low - size of msg in bytes(should be between 1 and 7)
 	// high - 1 - First frame, low - 0, size should be the first byte in the msg
 	// high - 2 - Consecutive message, low(1, 2, 3...n) message frame number
 	// high - 3 - Acknowledgement(go ahead) from reciever, low - 0

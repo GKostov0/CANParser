@@ -11,5 +11,5 @@ public:
 	FileReader() {}
 	~FileReader() {}
 
-	std::vector<std::string> ReadCANMessage(const char* filePath);
+	std::vector<std::string> ReadRawMessage(const char* filePath);
 };

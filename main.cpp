@@ -4,8 +4,8 @@
 int main()
 {
     FileReader reader;
-    Parser parser(reader.ReadCANMessage("Messages/CANMessage.txt"));
-    parser.PrintMessages();
+    Parser parser(reader.ReadRawMessage("Messages/CANMessage.txt"));
+    parser.PrintMessage();
 
     return 0;
 }
